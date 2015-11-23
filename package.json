@@ -1,0 +1,53 @@
+{
+  "name": "myp",
+  "version": "0.0.0",
+  "description": "Manage My Project, a spiritual successor for GYP.",
+  "keywords": [
+    "myp",
+    "gyp",
+    "manage",
+    "project",
+    "configure",
+    "build",
+    "clean",
+    "rebuild",
+    "test",
+    "package",
+    "publish",
+    "service",
+    "list",
+    "install",
+    "update",
+    "remove",
+    "make",
+    "es6"
+  ],
+  "homepage": "https://github.com/futagoza/myp",
+  "author": {
+    "name": "Futago-za Ryuu",
+    "email": "futagoza.ryuu@gmail.com",
+    "url": "https://futagoza.github.io/"
+  },
+  "license": "MIT",
+  "main": "lib/myp.js",
+  "bin": {
+    "myp": "bin/myp"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/futagoza/myp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/futagoza/myp/issues"
+  },
+  "dependencies": {
+    "fs-extra": "0.26.2",
+    "mocha": "2.3.4"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  }
+}
