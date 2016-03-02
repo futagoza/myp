@@ -1,0 +1,28 @@
+#!/usr/bin/env node
+const myp = require('../');
+const utils = myp.utils;
+
+const options = myp.parseArgv(process.argv.slice(2));
+
+const app = new myp.Application(process.cwd(), options);
+
+if ( !options.task ) {
+
+  app.exit(app.localMessageFor("UndefinedCommand"));
+
+}
+
+const task = options.task;
+const plugins = myp.plugins;
+
+for ( let name in plugins ) {
+
+  if ( !plugins.hasOwnProperty(name) ) break;
+
+  app.register(name, plugins[name]);
+
+  if ( !app.defined(task) ) continue;
+
+  app.run(task); break;
+
+}
